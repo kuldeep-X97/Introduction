@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuldeep Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Orbitron',sans-serif;
+    background:#030712;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* MATRIX BACKGROUND */
+
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.status{
+    border:1px solid #00ff88;
+    padding:12px 30px;
+    border-radius:40px;
+    margin-bottom:30px;
+    color:#00ff88;
+    box-shadow:0 0 20px #00ff88;
+}
+
+.logo{
+    font-size:70px;
+    font-weight:800;
+    margin-bottom:20px;
+    background:linear-gradient(90deg,#00ff88,#b026ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    text-shadow:0 0 30px rgba(176,38,255,0.6);
+}
+
+.typing{
+    font-size:24px;
+    color:#d1d5db;
+    margin-bottom:40px;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.btn{
+    padding:18px 40px;
+    text-decoration:none;
+    border-radius:14px;
+    font-size:18px;
+    transition:0.4s;
+    border:1px solid;
+}
+
+.green{
+    color:#00ff88;
+    border-color:#00ff88;
+    box-shadow:0 0 20px rgba(0,255,136,0.5);
+}
+
+.green:hover{
+    background:#00ff88;
+    color:black;
+    transform:translateY(-5px);
+}
+
+.purple{
+    color:#b026ff;
+    border-color:#b026ff;
+    box-shadow:0 0 20px rgba(176,38,255,0.5);
+}
+
+.purple:hover{
+    background:#b026ff;
+    color:white;
+    transform:translateY(-5px);
+}
+
+/* SECTION */
+
+section{
+    padding:100px 10%;
+}
+
+.title{
+    font-size:28px;
+    color:#00ff88;
+    margin-bottom:40px;
+}
+
+/* ABOUT */
+
+.about-box{
+    background:rgba(0,0,0,0.5);
+    border:1px solid rgba(0,255,136,0.3);
+    padding:40px;
+    border-radius:20px;
+    line-height:1.8;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 25px rgba(0,255,136,0.2);
+}
+
+/* SKILLS */
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.skill{
+    background:rgba(0,0,0,0.5);
+    padding:35px;
+    border-radius:20px;
+    border:1px solid rgba(176,38,255,0.4);
+    transition:0.4s;
+    text-align:center;
+    box-shadow:0 0 20px rgba(176,38,255,0.15);
+}
+
+.skill:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(176,38,255,0.4);
+}
+
+/* ACTIVITY */
+
+.terminal{
+    background:black;
+    border-radius:20px;
+    padding:30px;
+    border:1px solid #00ff88;
+    box-shadow:0 0 25px rgba(0,255,136,0.2);
+}
+
+.terminal p{
+    margin:15px 0;
+    color:#d1d5db;
+}
+
+.green-text{
+    color:#00ff88;
+}
+
+.blue{
+    color:#3b82f6;
+}
+
+.yellow{
+    color:#facc15;
+}
+
+.red{
+    color:#ef4444;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#9ca3af;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.logo{
+    font-size:45px;
+}
+
+.typing{
+    font-size:18px;
+}
+
+.btn{
+    width:100%;
+}
+
+}
+</style>
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<div class="hero">
+
+<div class="status">
+● SYSTEM ACTIVE
+</div>
+
+<h1 class="logo">KULDEEP</h1>
+
+<div class="typing">
+Python Developer | Web Creator
+</div>
+
+<div class="buttons">
+<a href="#about" class="btn green">ABOUT ME</a>
+
+<a href="mailto:tpatel9752@gmail.com" class="btn purple">
+CONTACT
+</a>
+</div>
+
+</div>
+
+<section id="about">
+
+<h2 class="title">// ABOUT</h2>
+
+<div class="about-box">
+
+<p>
+I am Kuldeep, a 17-year-old Python developer and web creator from India.
+I enjoy building modern websites, coding projects, and learning new technologies.
+</p>
+
+<br>
+
+<p>
+I am currently focused on improving my skills in Python,
+web development, and software engineering while creating
+creative and responsive websites.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">// SKILLS</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+
+<div class="skill">Web Development</div>
+
+<div class="skill">HTML CSS JS</div>
+
+<div class="skill">Responsive Design</div>
+
+<div class="skill">UI Design</div>
+
+<div class="skill">Animation Effects</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">// CURRENT ACTIVITY</h2>
+
+<div class="terminal">
+
+<p><span class="green-text">[ACTIVE]</span> Building personal websites</p>
+
+<p><span class="blue">[LEARN]</span> Learning advanced Python</p>
+
+<p><span class="yellow">[CREATE]</span> Designing modern web UI</p>
+
+<p><span class="red">[STUDY]</span> Preparing for future tech projects</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Kuldeep | All Rights Reserved
+</footer>
+
+<script>
+
+/* MATRIX EFFECT */
+
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const letters = "01アカサタナハマヤャラワガザダバパ";
+const fontSize = 14;
+const columns = canvas.width/fontSize;
+
+const drops = [];
+
+for(let x = 0; x < columns; x++)
+drops[x] = 1;
+
+function draw(){
+
+ctx.fillStyle = "rgba(0,0,0,0.05)";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle = "#00ff88";
+ctx.font = fontSize + "px monospace";
+
+for(let i = 0; i < drops.length; i++){
+
+const text = letters.charAt(
+Math.floor(Math.random()*letters.length)
+);
+
+ctx.fillText(text,i*fontSize,drops[i]*fontSize);
+
+if(drops[i]*fontSize > canvas.height &&
+Math.random() > 0.975)
+drops[i] = 0;
+
+drops[i]++;
+}
+
+}
+
+setInterval(draw,33);
+
+</script>
+
+</body>
+</html>
